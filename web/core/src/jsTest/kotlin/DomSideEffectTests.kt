@@ -62,7 +62,7 @@ class DomSideEffectTests {
 
         i = 1
 
-        waitChanges()
+        waitForChanges()
         assertEquals(
             expected = 1,
             actual = disposeCalls.size,
@@ -102,7 +102,7 @@ class DomSideEffectTests {
 
         showDiv = false
 
-        waitChanges()
+        waitForChanges()
         assertEquals(1, onDisposeCalledTimes)
         assertEquals(expected = "<div></div>", actual = root.outerHTML)
     }

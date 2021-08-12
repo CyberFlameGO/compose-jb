@@ -5,7 +5,6 @@ import androidx.compose.runtime.setValue
 import androidx.compose.runtime.getValue
 import org.jetbrains.compose.web.attributes.*
 import org.jetbrains.compose.web.core.tests.runTest
-import org.jetbrains.compose.web.core.tests.waitForAnimationFrame
 import org.jetbrains.compose.web.dom.*
 import org.w3c.dom.HTMLInputElement
 import org.w3c.dom.HTMLTextAreaElement
@@ -425,7 +424,7 @@ class InputsGenerateCorrectHtmlTests {
         assertEquals("""<form autocomplete="on"></form>""", root.innerHTML)
 
         autoCompleteEnabled = false
-        waitChanges()
+        waitForChanges()
 
         assertEquals("""<form autocomplete="off"></form>""", root.innerHTML)
     }
